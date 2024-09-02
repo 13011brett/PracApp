@@ -4,10 +4,6 @@
 	import ZoomPlugin from 'chartjs-plugin-zoom';
     export let propValue;
 
-    
-
-
-
 	let lineChartCanvas: HTMLCanvasElement;
 	let lineChart: Chart;
     let aliveData: number[];
@@ -51,6 +47,13 @@
 			},
 			options: {
 				plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem, data){
+                                return tooltipItem.raw == 1 ? "Online" : "Offline"; //Callback to check tooltip value to specify offline or online on hover.
+                            },
+                        }
+                    },
                     title: {
                         display: true,
                         text: "Uptime - Past 90 Days"
@@ -72,6 +75,7 @@
                         display: false
                     }
                 },
+                
 				responsive: true,
 				maintainAspectRatio: false
 			}
@@ -84,7 +88,6 @@
 		initLineChart();
 		
 		// Use prop data to add data into line chart.
-        // console.log('graphite data: ', propValue)
 		if (Array.isArray(propValue)) {
 				updateLineChart(propValue[0].datapoints);
 		}
