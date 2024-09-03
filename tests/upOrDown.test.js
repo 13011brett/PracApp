@@ -1,8 +1,6 @@
 import { expect, test, describe } from 'vitest';
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import fs from 'fs';
-import path from 'path';
 
 const execAsync = promisify(exec);
 
@@ -13,10 +11,14 @@ async function runPythonFunction(data) {
 	return stdout.trim();
 }
 
-function loadJsonData(filePath) {
-	const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, filePath), 'utf8'));
-	return data.datapoints;
-}
+//This method could be used if we took the API response and pulled it down into a JSON file.
+
+//Leaving it here as it was in the assessment.
+
+// function loadJsonData(filePath) {
+// 	const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, filePath), 'utf8'));
+// 	return data.datapoints;
+// }
 
 describe('upOrDown function', () => {
 	test('should return DOWN for empty data', async () => {
