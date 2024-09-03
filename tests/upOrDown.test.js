@@ -1,14 +1,23 @@
 import { expect, test, describe } from 'vitest';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import path from 'path';
 
 const execAsync = promisify(exec);
+
+let unitTestPath = "./tests/unitTestTest.py"
+
+const { platform } = process;
+if(platform === 'win32'){
+	unitTestPath = unitTestPath.replaceAll(path.sep, path.win32.sep);
+}
 
 async function runPythonFunction(data) {
 // Python script was exported to its own file. This was a requirement, possibility due to machine configuration.
 
-	const { stdout } = await execAsync(`python3 ".\\tests\\unitTestTest.py" ${JSON.stringify(data)}`);
+	const { stdout } = await execAsync(`python3 '${unitTestPath}' ${JSON.stringify(data)}`);
 	return stdout.trim();
+	//return unitTestPath;
 }
 
 //This method could be used if we took the API response and pulled it down into a JSON file.
