@@ -11,15 +11,30 @@ All timestamps are recorded onto the line chart, left out timestamps but if more
 
 ## Objectives
 
-[X] Add a few visualizations of the data returned from the API. -- Completed, Done this with the pie chart and line chart that was provided using ChartJS. Pie chart & Line chart, with zooming in and out capabilities on the line chart. Could add a bar graph but given it's two data points ultimately (down or up) this would suffice. If we were adding other tracking endpoints (CPU, GPU, etc) then we could have other data points on the charts and other charts.
+[X] Add a few visualizations of the data returned from the API.
+  * Completed, Done this with the pie chart and line chart that was provided using ChartJS. Pie chart & Line chart, with zooming in and out capabilities on the line chart. Could add a bar graph but given it's two data points ultimately (down or up) this would suffice. If we were adding other tracking endpoints (CPU, GPU, etc) then we could have other data points on the charts and other charts.
 
-[X] Utilize the "microservices" directory to assist with some data visualizations. We've included tests for one such visualization, a simple panel that displays, based on the data provided, if the host is "UP" or "DOWN". Please make all of these pass, and feel free to add new ones for any others you want to add. -- Up or Down is now working given the datasets and tests. Would have liked to add tests for other visualizations, alongside the actual data provided from the host. One thing is that the host endpoint given does provide null values, so will need to ask if my inferring of that meaning the host is down is correct or not.
 
-[x] Add the ability to resize the charts, and have the new size persist when the page is refreshed. -- Resizing works, _state does not unfortunately_ so this is a partial completion given time constraints.
 
-[X] Create a treeview component with host we provided, and add a few made-up hosts that would return a similar dashboard (but keep in mind our API only returns data for the one host) -- Did this just underneath the current reports dashboard, but could easily transfer to a component and make it on a separate page instead.
+[X] Utilize the "microservices" directory to assist with some data visualizations. We've included tests for one such visualization, a simple panel that displays, based on the data provided, if the host is "UP" or "DOWN". Please make all of these pass, and feel free to add new ones for any others you want to add. 
+  * Up or Down is now working given the datasets and tests. Would have liked to add tests for other visualizations, alongside the actual data provided from the host. One thing is that the host endpoint given does provide null values, so will need to ask if my inferring of that meaning the host is down is correct or not.
 
-[X] Please add your own eye and style this page as you'd like! -- Completed, had some fun with this project but I do feel it is rather basic.
+
+
+[x] Add the ability to resize the charts, and have the new size persist when the page is refreshed. 
+  * Resizing works, _state does not unfortunately_ so this is a partial completion given time constraints.
+
+
+
+[X] Create a treeview component with host we provided, and add a few made-up hosts that would return a similar dashboard (but keep in mind our API only returns data for the one host) 
+  * Did this just underneath the current reports dashboard, but could easily transfer to a component and make it on a separate page instead.
+
+
+
+[X] Please add your own eye and style this page as you'd like! 
+  * Completed, had some fun with this project but I do feel it is rather basic.
+
+
 
 # Utilization / Requirements
 - NodeJS / NPM required
