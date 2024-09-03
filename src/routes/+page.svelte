@@ -69,7 +69,7 @@
 			}
 		});
 
-		lineChartModule = (await import('../lineChart.svelte')).default;
+		lineChartModule = (await import('$lib/components/lineChart.svelte')).default;
 		itemSize = {width: (window.innerWidth / 5), height: 400}
 
 
