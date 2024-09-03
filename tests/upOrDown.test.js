@@ -7,18 +7,9 @@ import path from 'path';
 const execAsync = promisify(exec);
 
 async function runPythonFunction(data) {
-	const pythonScript = `
-import json
-import sys
-sys.path.append('src/microservices')
-from operations import up_or_down
+// Python script was exported to its own file. This was a requirement, possibility due to machine configuration.
 
-data = json.loads(sys.argv[1])
-result = up_or_down(data)
-print(result)
-    `;
-
-	const { stdout } = await execAsync(`python3 -c "${pythonScript}" '${JSON.stringify(data)}'`);
+	const { stdout } = await execAsync(`python3 ".\\tests\\unitTestTest.py" ${JSON.stringify(data)}`);
 	return stdout.trim();
 }
 

@@ -75,28 +75,6 @@
 
 	});
 
-
-	const theme = {
-		scheme: 'harmonic16',
-		author: 'jannik siebert (https://github.com/janniks)',
-		base00: '#fff',
-		base01: '#223b54',
-		base02: '#405c79',
-		base03: '#627e99',
-		base04: '#aabcce',
-		base05: '#cbd6e2',
-		base06: '#e5ebf1',
-		base07: '#f7f9fb',
-		base08: '#bf8b56',
-		base09: '#bfbf56',
-		base0A: '#8bbf56',
-		base0B: '#56bf8b',
-		base0C: '#568bbf',
-		base0D: '#8b56bf',
-		base0E: '#bf568b',
-		base0F: '#bf5656'
-	};
-
 	itemSize = {width: 200, height: 400}; // placeholders for the onMount event
 	
 </script>
@@ -149,11 +127,11 @@
 			 </Grid>
 
 			<div class="row tm-content-row tm-mt-big d-flex justify-content-center">
-				<div class="tm-col tm-col-big">
+				<div class="tm-col tm-col-xlbig d-flex justify-content-center">
                     <div class="bg-light tm-block h-100">
 						<h2 class="tm-block-title">Tree view for {graphiteDataEndpoint ?? "Unknown host"}</h2>
 						<TreeView
-							theme={theme}
+							class="tree-view-wrapper"
 							data={graphiteData}
 							showCopyButton
 						/>
@@ -161,11 +139,11 @@
                 </div>
 			</div>
 			<div class="row tm-content-row tm-mt-big d-flex justify-content-center">
-				<div class="tm-col tm-col-big">
+				<div class="tm-col tm-col-xlbig d-flex justify-content-center">
                     <div class="bg-light tm-block h-100">
 						<h2 class="tm-block-title">Tree-view for host2</h2>
 						<TreeView
-							theme={theme}
+							class="tree-view-wrapper"
 							data={graphiteData}
 							showCopyButton
 						/>
@@ -173,11 +151,11 @@
                 </div>
 			</div>
 			<div class="row tm-content-row tm-mt-big d-flex justify-content-center">
-				<div class="tm-col tm-col-big">
+				<div class="tm-col tm-col-xlbig d-flex justify-content-center">
                     <div class="bg-light tm-block h-100">
 						<h2 class="tm-block-title">Tree-view for host3</h2>
 						<TreeView
-							theme={theme}
+							class="tree-view-wrapper"
 							data={graphiteData}
 							showCopyButton
 						/>
