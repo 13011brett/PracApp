@@ -45,7 +45,7 @@ All timestamps are recorded onto the line chart, left out timestamps but if more
 
   I have tested this app in Windows, utilizing WSL, and have not used in Linux strictly as of yet but there should be close to no issues.
 
-  After ensuring requirements are installed, all that is required is to run npm install && npm run dev which will then start the web application. Next, you will need to run the go backend, by simply running `go run .\server\main.go`. You can run these both within screens to monitor, or separate terminals if you desire. Access is at `localhost:5173` by default.
+  After ensuring requirements are installed, all that is required is to run `npm install && npm run dev` which will then start the web application. Next, you will need to run the go backend, by simply running `go run .\server\main.go`. You can run these both within screens to monitor, or separate terminals if you desire. Access is at `localhost:5173` by default.
 
   # Unit Test(s)
   **Disclaimer** -- This unit test script was ran on a Windows machine, so some changes were needed. This may not work on a Linux machine, I will attempt to test this out beforehand. **Update** -- this now works on linux machines.
