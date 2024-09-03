@@ -70,12 +70,12 @@
 		});
 
 		lineChartModule = (await import('$lib/components/lineChart.svelte')).default;
-		itemSize = {width: (window.innerWidth / 5), height: 400}
+		itemSize = {width: (window.innerWidth / 10), height: 400}
 
 
 	});
 
-	itemSize = {width: 200, height: 400}; // placeholders for the onMount event
+	itemSize = {width: 200, height: 300}; // placeholders for the onMount event
 	
 </script>
 
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <!-- row -->
-			 <Grid class="grid-reports" {itemSize} cols={4} rows={0}>
+			 <Grid class="grid-reports" {itemSize} cols={8} rows={0}>
 				<div class="row tm-content-row tm-mt-big">
 					<div class="tm-col tm-col-big">
 						<GridItem class="grid-item" activeClass="grid-item-active" x={0} y={0}>
